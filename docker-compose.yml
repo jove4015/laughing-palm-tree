@@ -1,0 +1,13 @@
+name: laughing-palm-tree
+
+services:
+  app:
+    image: laughing-palm-tree
+    build: .
+    ports:
+      - 3000:3000
+      - 9229:9229
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    command: npm run prod
